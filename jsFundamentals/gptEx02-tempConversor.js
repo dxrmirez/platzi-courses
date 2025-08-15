@@ -1,12 +1,12 @@
 /* CONVERSOR DE TEMPERATURA
-El usuario podrá elegir si desea convertir de Celsius a Fahrenheit o de Fahrenheit a Celsius.
+Crea un conversor que transforme temperaturas de Celsius a Fahrenheit y viceversa según la elección del usuario.
 
-Logica:
-    - Debes mostrar el resultado de forma clara.
 Condiciones:
-    1. Validar que el valor ingresado sea numérico.
-    2. Usar estructuras condicionales (if o switch).
-    3. Mostrar un mensaje distinto si el usuario ingresa algo inválido.
+    1. Solicitar al usuario la temperatura y el tipo de conversión (por ejemplo: "C" o "F").
+    2. Validar que la temperatura ingresada sea un número.
+    3. Usar las fórmulas correctas:
+        Celsius → Fahrenheit: (°C × 9/5) + 32
+        Fahrenheit → Celsius: (°F − 32) × 5/9
 */
 
 let scale = 0
@@ -57,4 +57,5 @@ while (validateTemp) {
     }
 }
 
-console.log(`The convertion of ${tempOriginal.temp}${tempOriginal.degree} in ${tempConverted.scale} degree was ${tempConverted.temp}${tempConverted.degree}`)
+console.log(`The convertion of ${tempOriginal.temp}${tempOriginal.degree} in ${tempConverted.scale} degrees was ${tempConverted.temp}${tempConverted.degree}`)
+alert(`The convertion of ${tempOriginal.temp}${tempOriginal.degree} in ${tempConverted.scale} degrees was ${tempConverted.temp}${tempConverted.degree}`)
