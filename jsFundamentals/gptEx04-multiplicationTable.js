@@ -2,9 +2,9 @@
 Crea un programa que muestre la tabla de multiplicar de un número dado, desde 1 hasta 10.
 
 Condiciones:
-1. Solicitar un número entero.
-2. Solo dejar ingresar números positivos.
-3. Mostrar en consola la tabla de multiplicar en un formato claro (ej: 5 x 3 = 15).
+    1. Solicitar un número entero.
+    2. Solo dejar ingresar números positivos.
+    3. Mostrar en consola la tabla de multiplicar en un formato claro (ej: 5 x 3 = 15).
 */
 let validateNumber = true
 let number = 0
