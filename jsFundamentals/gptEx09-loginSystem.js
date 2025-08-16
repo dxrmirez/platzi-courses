@@ -9,22 +9,23 @@ Condiciones:
 
 let database = { user: "admin", password: "1234" }
 let attempts = 0
-let match=false
+let match = false
 
 do {
     let userAttempt = prompt("Enter your user:")
     let passwordAttempt = prompt("Enter your password:")
     if (userAttempt == database.user) {
         if (passwordAttempt == database.password) {
-            alert("Successful login!")
-            attempts = 3
-            match=true
+            attempts++
+            match = true
+            alert(`Successful login in ${attempts} attempt(s). Enjoy!`)
         }
         else { alert("Password is incorrect. Try again!"); attempts++ }
     }
     else { alert("This user doesn't exist. Try again!"); attempts++ }
+    if (match) { break }
 } while (attempts < 3)
 
-if(match==false){
-    alert("You've tried 3 times. Access blocked.")
+if (match == false) {
+    alert(`You've tried ${attempts} times. Access blocked.`)
 }
