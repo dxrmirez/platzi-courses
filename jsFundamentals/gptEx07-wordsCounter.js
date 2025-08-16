@@ -5,10 +5,11 @@ Condiciones:
 1. Solicitar al usuario una frase.
 2. Ignorar espacios extra al inicio, entre palabras y al final.
 3. No contar palabras vacías (ejemplo: “Hola mundo” debe contar 2).
-4. Mostrar la cantidad de palabras obtenida. 
+4. Mostrar la cantidad de palabras obtenida.
+5*. No incluir simbolos ni numeros en las palabras
 */
 
-let cleanText = prompt("Enter a new phrase:").replace(/\s+/g, " ").trim()
+let cleanText = prompt("Enter a new phrase:").replace(/\s+/g, " ").replace(/[^a-zA-ZáéíóúÁÉÍÓÚ\s]/g,"").trim()
 let blankSpacePosition = []
 let wordsSliced=[]
 let separator=-1
@@ -18,7 +19,7 @@ for (i = 0; i < cleanText.length; i++) {
         blankSpacePosition.push(i)
     }
 }
-console.log(blankSpacePosition);
+console.log("Blank positions in: "+blankSpacePosition);
 
 for (i = 0; i <= blankSpacePosition.length; i++) {
     wordsSliced.push(cleanText.slice(separator+1,blankSpacePosition[i]))
