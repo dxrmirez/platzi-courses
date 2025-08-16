@@ -28,4 +28,3 @@ for (i = 0; i <= blankSpacePosition.length; i++) {
 
 alert(`This phrase has ${wordsSliced.length} words`)
 console.log(`This phrase has ${wordsSliced.length} words`)
-cleanText = prompt("Enter a new phrase:").replace(/\s+/g, " ").trim()
