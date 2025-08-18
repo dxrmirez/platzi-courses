@@ -5,10 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jsFundamentals</title>
-    <script src="gptEx10-repeatedElements.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            font-size: 100%;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-text {
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .text-property {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .text-property p {
+            height: 100%;
+        }
+
+        .text-value {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        input[type=text] {
+            width: 8rem;
+            margin-right: 0.4rem;
+            padding-left: 0.4rem;
+            height: 1.4rem;
+        }
+
+        input[type=button] {
+            background-color: #307e32;
+            box-sizing: border-box;
+            border: 0.1rem solid black;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            margin-right: 0.4rem;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 4rem;
+        }
+
+        input[type=button]:hover {
+            background-color: #47a84a;
+        }
+    </style>
+    <script src="gptEx11-studentsNotes.js" defer></script>
 </head>
 
 <body>
 </body>
+<h2>STUDENT GRADE RECORD</h2>
+<p>Enter a new student. Press <b>'Add'</b> to update the list. You can press <b>'Clear'</b> if you want to delete all.</p><br>
+<div class="form">
+    <div class="form-text">
+        <div class="text-property">
+            <p>Name:</p>
+            <p>Age:</p>
+            <p>Note:</p>
+        </div>
+        <div class="text-value">
+            <input type="text" id="form-name">
+            <input type="text" id="form-age">
+            <input type="text" id="form-note">
+        </div>
+    </div>
+    <div class="form-buttons">
+        <input type="button" id="add-button" value="Add">
+        <input type="button" id="clear-button" value="Clear">
+    </div>
+</div>
+<br>
+<h3>Students:</h3>
+<ul id="list"></ul>
 
 </html>
