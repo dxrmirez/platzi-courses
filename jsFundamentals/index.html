@@ -73,24 +73,24 @@
             background-color: #47a84a;
         }
     </style>
-    <script src="gptEx11-studentsNotes.js" defer></script>
+    <script src="gptEx12-shoppingCart.js" defer></script>
 </head>
 
 <body>
 </body>
-<h2>STUDENT GRADE RECORD</h2>
-<p>Enter a new student. Press <b>'Add'</b> to update the list. You can press <b>'Clear'</b> if you want to delete all.</p><br>
+<h2>SHOPPING CART</h2>
+<p>Enter a new item in the cart. Press <b>'Add'</b> to update the list. You can press <b>'Clear'</b> if you want to delete all.</p><br>
 <div class="form">
     <div class="form-text">
         <div class="text-property">
-            <p>Name:</p>
-            <p>Age:</p>
-            <p>Note:</p>
+            <p>Product:</p>
+            <p>Amount:</p>
+            <p>Cost:</p>
         </div>
         <div class="text-value">
-            <input type="text" id="form-name">
-            <input type="text" id="form-age">
-            <input type="text" id="form-note">
+            <input type="text" id="form-product">
+            <input type="text" id="form-amount">
+            <input type="text" id="form-cost">
         </div>
     </div>
     <div class="form-buttons">
@@ -99,7 +99,9 @@
     </div>
 </div>
 <br>
-<h3>Students:</h3>
-<ul id="list"></ul>
+<h3>Cart:</h3>
+<ul id="list"></ul><br>
+<h3>Total:</h3>
+<h4 id="result">20000</h4>
 
 </html>
